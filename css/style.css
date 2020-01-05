@@ -1,0 +1,141 @@
+
+
+/*========================*/
+/* BASIC SETUP */
+/*========================*/
+@font-face{
+	src: url('../vendors/fonts/TitilliumWeb-Regular.ttf');
+	font-family: Titillium Web;
+}
+/*all html tag select*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: none;
+}
+/*html tag*/
+html{
+	scroll-behavior: smooth;
+}
+/*body tag*/
+body{
+	font-family: Titillium Web;
+	text-rendering: optimizeLegibility;
+}
+/*list tag*/
+ul li{
+	list-style-type: none;
+}
+/*anchor tag*/
+a{
+	text-decoration: none;
+}
+/*img tag*/
+img{
+	vertical-align: middle;
+}
+
+
+
+
+
+/*=======================*/
+/* REUSABLE COMPONENTS */
+/*=======================*/
+section{
+	padding: 70px 0px;
+}
+
+
+
+
+
+/*=======================*/
+/*Section Design flex*/
+/*=======================*/
+.card-section{
+	width: 100%;
+	background: #333;
+}
+.card-wrapper{
+	max-width: 80%;
+	margin: auto;
+	display: block;
+}
+.card-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 300px;
+	grid-column-gap: 30px;
+}
+.card-item{
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease;
+	background: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(red, #4ee, transparent);
+}
+.card-item:hover{
+	transform: rotateY(180deg);
+}
+.card-frontend-content img{
+	max-width: 50%;
+	border-radius: 50%;
+}
+.card-frontend-content h3{
+	color: #fff;
+	margin-top: 8px;
+	margin-bottom: 6px;
+}
+.card-frontend-content span{
+	color: lightblue;
+}
+/*Card Backend Content*/
+.card-backend-content{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-backend-content h3{
+	margin-bottom: 8px;
+	color: #222;
+    font-size: 32px;
+}
+.card-backend-content span{
+	color: #03a9f4;
+}
+.card-backend-content p{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #333;
+	padding: 0px 30px;
+}
+.card-backend-content ul li{
+	display: inline;
+}
+.card-backend-content ul li a{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
